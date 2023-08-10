@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       home: MyHomePage(title: appTitle),
     );
   }
-}
+} 
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
