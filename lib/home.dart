@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 void main() => runApp(const HomePage());
 
@@ -23,10 +24,13 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final FirebaseAuth auth = FirebaseAuth.instance;
+    final User? user = auth.currentUser;
+
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: const Center(
-        child: Text('My Page!'),
+      body: Center(
+        child: Text('Bem-vindo, ${user?.email}, ${user?.uid}'),
       ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
