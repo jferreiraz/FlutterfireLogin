@@ -8,13 +8,13 @@ class HomePage extends StatelessWidget {
   static const appTitle = 'Drawer Demo';
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return const MaterialApp(
       title: appTitle,
       home: MyHomePage(title: appTitle),
     );
   }
-}
+} 
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
